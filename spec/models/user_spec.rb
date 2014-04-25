@@ -34,7 +34,7 @@ describe 'user accounts' do
 
   describe "updating the email address" do
     it "should still test the validation" do
-      user = User.create(firstname: "Jimmy Jim", password: "password", email: "admin@example.com")
+      user = User.create(firstname: "Jimmy Jim", lastname: "Jimerson", password: "password", email: "admin@example.com")
       user.valid?.should == true
       user.email = "admin2@example.com"
       user.save
